@@ -11,7 +11,8 @@ Before we can start writing programs, we need to set everything up properly. Thi
 By following these steps, you'll create a functional development environment ready for programming.
    
 ## Using the Software Development Directory Structure - SDDS. 
-<img align="right" src="https://github.com/user-attachments/assets/0f9e7ce4-cf0c-450a-9d8e-c0bf934c5d71" min-width="260px" height="153px">
+<img align="right" src="https://github.com/user-attachments/assets/6e9610c2-beb3-4e67-8156-84c8a5e29686">
+
    
 A key aspect of my method is the use of a _Software Development Directory Structure_, which helps me properly organize my work and resources. This technique was recommended and taught to me by professionals such as my Java professor, Carlos Cano Ladera, and my supervisor during my internship, Joaquín Matías Aguirre. Both are exceptional teachers and professionals whom I deeply appreciate. Given this method, the installation process will not completely reflect the one described in Vahe Aslanyan's book. In his book, Mr. Aslanyan instructs readers on how to install the JDK through an installer rather than using a "compact portable" installation. From now on, the "Software Development Directory Structure" will be referred to as "SDDS". With this clarification, let's continue.
    
@@ -30,10 +31,11 @@ To download the JDK, visit Oracle's official website and navigate to the downloa
 > Avoid using the installer unless you are confident in your needs and understand the potential configuration issues it may introduce. Installers can sometimes create discrepancies that affect your IDE setup. By going wiith the compressed archive all configurations will be done manually and prevent any errors.
 
 <p align="center" width="100%">
-<img  src="https://github.com/user-attachments/assets/03d61e51-7e06-4893-a5d1-d06aade76608">
+<img src="https://github.com/user-attachments/assets/d9a014ca-12ea-4dbc-940c-e3d17a26ed9d">
 </p>   
 
 <hr/>
+
    
 ### **Installing the Integrated Development Environment (IDE) Software**
    
@@ -48,8 +50,12 @@ The choice of software for writing programs is a personal preference. I will be 
 > If you are not going to work with the [SDDS](#using-the-software-development-directory-structure---sdds) as I do, then you are free to go with the installer route. Otherwise if you DO work with [SDDS](#using-the-software-development-directory-structure---sdds) you will have to make sure you are downloading the packaged version of the IDE.
    
 <p align="center" width="100%">
-    <img src="https://github.com/user-attachments/assets/375a1a13-3b1c-4a03-a7e2-11162523433f">
+    
+   <img  src="https://github.com/user-attachments/assets/f9985d9f-aed4-4d0d-9be5-d7edd4b3528d">
 </p>
+
+
+
    
 One of the great advantages of this installation method is that you don't need to install the IDE traditionally. Instead, simply extract the contents of the compressed archive to your preferred directory, and you're all set. For example, I’ll be extracting the IDE to C:\dev\IDE\Eclipse\Eclipse2024-06-Winx86_64. I like to keep the folder name the same as the original compressed archive so I can easily identify the version I'm using. This approach also helps maintain a sort of version history if I decide to use different versions in the future.
    
@@ -65,34 +71,46 @@ This is the final step in the configuration process. We need to inform the syste
    
 > [!IMPORTANT]
 > There is a difference between user environment variables and system environment variables. If you are configuring the IDE for academic purposes on your own device, you can use the system-wide configuration. However, if you are using a device without Administrator permissions, you will need to use the user variable option. The only difference is the 'range' of the configuration.
-
+---
 **Creating the JAVA_HOME variable.**
 
- <img align="right" src="https://github.com/user-attachments/assets/7a9a4774-7de6-4cc6-aa2f-9700d1902065">   
-To create the JAVA_HOME environment variable on Windows, start by pressing the Windows key and R simultaneously to open the Run dialog box. 'Type sysdm.cpl' into the box and press Enter. This will open the System Properties window. Within this window, navigate to the 'Advanced' tab and click on the 'Environment Variables' button.
+
+<img align="right" src="https://github.com/user-attachments/assets/dcc1ec85-7c32-4546-b8c7-599eaee7974d">
    
-A new window will appear, allowing you to manage environment variables. In this window, click on 'New...' under the User variables or System variables section, depending on whether you need the variable to be user-specific or system-wide. In the New System Variable dialog that opens, set the variable name to 'JAVA_HOME' and specify the path to your JDK installation as the variable value (for example, C:\dev\core\Java\JDK\oracle\Version\jdk-21.0.4). 
+- To create the **JAVA_HOME** environment variable on Windows, start by pressing the **Windows key** and **R** simultaneously to open the _Run_ dialog box.
+- Type `sysdm.cpl` into the box and press _Enter_. This will open the _System Properties_ window. 
+    
+      
+- Within this window, navigate to the _'Advanced'_ tab and click on the _'Environment Variables'_ button.
    
-Confirm by clicking OK.
+A new window will appear, allowing you to manage environment variables. 
+- In this window, click on _'New...'_ under the **User variables** or **System variables** section, depending on whether you need the variable to be user-specific or system-wide. In the _New System Variable_ dialog that opens, set the variable name to `JAVA_HOME` and specify the path to your JDK installation directory as the variable value (for example, C:\dev\core\Java\JDK\oracle\Version\jdk-21.0.4). 
+   
+Confirm by clicking _OK_.
+
 
 <p align="center" width="100%">
-    <img src="https://github.com/user-attachments/assets/a46924a5-c6d0-4cde-9e87-be8af4890acf">
+    <img src="https://github.com/user-attachments/assets/54e1740b-7eed-4fae-95f8-fc8fa45c0c77">
 </p>
 
 After these steps, ensure that the JAVA_HOME variable is listed among the environment variables. 
 
 <p align="center" width="100%">
-    <img src="https://github.com/user-attachments/assets/1b683fdb-65e9-4854-804b-ec6c8ed3262d">
+    <img src="https://github.com/user-attachments/assets/87bcd313-a8ae-42c5-8269-38617f86fe57">
 </p>
    
    
+---
    
 **Adding the binaries to the Path variable.**
 
-Now locate the 'Path' variable. This variable should already exist in your system, all we need to do is add a new location to the locations stored within it. To add your binaries to your path variable double click on 'Path' and then click on 'New' to add your new location. In this variable we must locate the '\bin' directory within your Java installation folder. To make things easier we can simply type **'%JAVA_HOME%\bin'** and then press enter to confirm. It is important to use the '%' symbols before and after the variable name in order to access the value of the variable itself and not the name string.
+Now locate the **'Path'** variable. This variable should already exist in your system, all we need to do is add a new location to the locations stored within it. To add your binaries to your path variable double click on **'Path'** and then click on _'New'_ to add your new location. In this variable we must locate the _'\bin'_ directory within your Java installation folder. To make things easier we can simply type `'%JAVA_HOME%\bin'` and then press enter to confirm. 
+   
+> [!CAUTION]
+> It is important to use the `%` symbols before and after the variable name in order to access the value of the variable itself and not the name string.
 
 <p align="center" width="100%">
-    <img src="https://github.com/user-attachments/assets/480309c6-36fd-4e27-be26-c3f4c526e50b">
+    <img src="https://github.com/user-attachments/assets/41ff8de5-edfe-4d50-9353-e1aa7cbd9c97">
 </p>
 
 
@@ -103,8 +121,19 @@ Finally, click OK to close all windows and apply the changes. This completes the
 Now to check if all is working propperly open the CMD and type '**java -version**' . The result should look something like this.
     
 <p align="center" width="100%">
-    <img src="https://github.com/user-attachments/assets/1bf8d1fc-0086-48ee-8454-cb8b26594489">
+    <img src="https://github.com/user-attachments/assets/d88b83a4-f6af-4aa0-a584-fe07d95450e5">
 </p>
+   
+<hr>
+   
+# _Et voilá_
+We are done. Your IDE is officialy configured and you can get ready to write programs. 
+   
+Happy programming!
 
+> [!NOTE]
+> I created this guide primarily for myself as a practice method and to explore Markdown language. This configuration method is quite basic and tailored to my specific needs and methodology. However, if you found this guide helpful in setting up your IDE and making it work, I'm very glad it did!
+   
+> Best regards. David Jason.
 
   
