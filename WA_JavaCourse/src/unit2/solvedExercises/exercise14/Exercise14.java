@@ -54,6 +54,11 @@ public class Exercise14 {
 		if (month > 12) {
 			month = month - 12;
 			year++;
+			
+			// Year 0 doesn't exist.
+			if (year==0) {
+				year++;
+			}
 		}
 
 		System.out.printf("The resulting date after a day is: %02d-%02d-%04d", day, month, year);

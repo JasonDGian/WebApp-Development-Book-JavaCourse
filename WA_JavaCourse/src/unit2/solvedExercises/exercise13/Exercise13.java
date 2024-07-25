@@ -39,6 +39,8 @@ public class Exercise13 {
 		System.out.println("The time after a second will be: ");
 
 		System.out.printf("%02d : %02d : %02d", hour, min, sec);
+		
+		sc.close();
 	}
 
 }
