@@ -17,7 +17,7 @@ public class Exercise12 {
 
 		int monthDays = 0;
 
-		// year 0 doesnt exist.
+		// year 0 doesn't exist.
 		if (year == 0) {
 			System.out.println("Invalid year entered.");
 		} else {
@@ -59,6 +59,7 @@ public class Exercise12 {
 			}
 
 		}
+		sc.close();
 
 	}
 
