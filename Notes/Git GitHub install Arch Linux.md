@@ -1,7 +1,11 @@
 > [!NOTE]
-> The commands used in this guide are specific to Arch Linux. If you are using a different distribution, the commands and package names may differ.
-
-## Setting Up GitHub on Linux
+> The commands in this guide are specific to Arch Linux. If you are using a different Linux distribution, the commands and package names might vary. **If you are using _Microsoft Windows_, this guide will not work for you**.
+   
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d2c785a1-0048-4dcb-9a86-f53a2962b10f"/>
+</p>
+   
+# Setting Up GitHub on Linux
 In this short guide, I will explain how to quickly set up Git on Linux and how to authenticate against GitHub, since HTTP authentication via the terminal is no longer supported.
 
 ### Install Git and Configure Username and Email
@@ -71,5 +75,27 @@ Enter here the code you recieved in your terminal.
 Finally, authorize the device.
    
 <img src="https://github.com/user-attachments/assets/8859e85d-96f4-41d9-ab26-8fd200f6e4c6">
-
+   
+>[!IMPORTANT]
+> You will also need to check your Google Authenticator or a similar app, as this process requires 2FA.
 ---
+   
+Once everything is done, you will receive an authentication success confirmation.
+   
+<img src="https://github.com/user-attachments/assets/e6a5d5e9-b684-4bf1-87e6-bc304ecc8805">
+   
+<img src="https://github.com/user-attachments/assets/02e66b5d-d414-4369-b524-f730b678bd55">
+
+
+ # Done! 
+ ### Congratulations. You are all set!
+   
+ <img align="right" src="https://github.com/user-attachments/assets/a59a090e-f3c0-45aa-ac66-cd50027839c0">
+    
+ Now you are all set to clone and stage and add and commit and push and rebase and ammend and reset and... and.. _aand_ ...
+    
+ ---
+    
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/3e694af8-a06a-4d84-9f4a-7012555d7d39"/>
+</p>
