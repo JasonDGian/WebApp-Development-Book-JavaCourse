@@ -1,10 +1,14 @@
+   
 > [!NOTE]
 > The commands in this guide are specific to Arch Linux. If you are using a different Linux distribution, the commands and package names might vary. **If you are using _Microsoft Windows_, this guide will not work for you**.
-   
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d2c785a1-0048-4dcb-9a86-f53a2962b10f"/>
+   <a class="hover" href="https://git-scm.com/"><img src="https://github.com/user-attachments/assets/79fcbe71-9b63-4ea4-b2b3-0a30a1d9e7c8"><a/>
+   <a href="https://github.com/"><img src="https://github.com/user-attachments/assets/0ea4565d-a109-4c52-a3d8-df06bcc7a653"><a/>
+   <a href="https://archlinux.org/"><img src="https://github.com/user-attachments/assets/dfc32fc0-9915-40ef-9b86-2e17ac6c7784"><a/>
+   <a href="https://www.linux.org/pages/download/"><img src="https://github.com/user-attachments/assets/13d817e7-c046-4fe3-ae16-f8b521694dea"><a/>
 </p>
-   
+
 # Setting Up GitHub on Linux
 In this short guide, I will explain how to quickly set up Git on Linux and how to authenticate against GitHub, since HTTP authentication via the terminal is no longer supported.
 
@@ -90,12 +94,17 @@ Once everything is done, you will receive an authentication success confirmation
  # Done! 
  ### Congratulations. You are all set!
    
- <img align="right" src="https://github.com/user-attachments/assets/a59a090e-f3c0-45aa-ac66-cd50027839c0">
+ <a href="https://dictionary.cambridge.org/dictionary/english/confusion"><img align="right" src="https://github.com/user-attachments/assets/a59a090e-f3c0-45aa-ac66-cd50027839c0"></a>
     
  Now you are all set to clone and stage and add and commit and push and rebase and ammend and reset and... and.. _aand_ ...
     
  ---
-    
- <p align="center">
-  <img src="https://github.com/user-attachments/assets/3e694af8-a06a-4d84-9f4a-7012555d7d39"/>
+ 
+
+
+<p align="center">
+   <a class="hover" href="https://git-scm.com/"><img src="https://github.com/user-attachments/assets/79fcbe71-9b63-4ea4-b2b3-0a30a1d9e7c8"><a/>
+   <a href="https://github.com/"><img src="https://github.com/user-attachments/assets/0ea4565d-a109-4c52-a3d8-df06bcc7a653"><a/>
+   <a href="https://archlinux.org/"><img src="https://github.com/user-attachments/assets/dfc32fc0-9915-40ef-9b86-2e17ac6c7784"><a/>
+   <a href="https://www.linux.org/pages/download/"><img src="https://github.com/user-attachments/assets/13d817e7-c046-4fe3-ae16-f8b521694dea"><a/>
 </p>
