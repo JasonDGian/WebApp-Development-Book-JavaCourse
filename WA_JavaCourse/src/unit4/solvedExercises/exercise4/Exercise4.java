@@ -36,7 +36,7 @@ public class Exercise4 {
 		// The function does not print the result, it returns it, so we print it
 		// ourselves.
 		System.out.println(returnMax(a, b));
-		
+
 		sc.close();
 
 	}
