@@ -1,6 +1,13 @@
 > [!NOTE]
 > This Readme.md is presented in both <img height="15px" src="https://github.com/user-attachments/assets/435bb9a8-c07e-4739-a434-d25df1aeb198"> **English** and <img height="15" src="https://github.com/user-attachments/assets/04ccf2ae-06c5-4b6b-a8b5-289025c935b7"> **Spanish**.
 > Feel free to chose your prefferred language.
+
+
+<!-- TODO 
+- Add italian translation.
+- Add index and section links.
+-->
+
    
 --- 
    <img align="left" src="https://github.com/user-attachments/assets/435bb9a8-c07e-4739-a434-d25df1aeb198">
