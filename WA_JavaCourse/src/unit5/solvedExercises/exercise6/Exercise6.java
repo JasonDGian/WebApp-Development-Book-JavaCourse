@@ -12,30 +12,30 @@ public class Exercise6 {
 
 	// MAIN METHOD - MAIN PROGRAMME ENTRY POINT.
 	public static void main(String[] args) {
-		
+
 		int ticketNumbers = 6;
 		int ticketMaxNum = 50;
 
 		int[] bet = fillWithEvenRandom(ticketNumbers, ticketMaxNum);
 		int[] winner = fillWithEvenRandom(ticketNumbers, ticketMaxNum);
 
-		Arrays.sort(winner);
-
 		printArray(bet);
 		printArray(winner);
-		System.out.println("The number of matching numbers is: " + getNumberOfMatches(bet, winner));
+		System.out.println("The number of matching numbers is: " + getNumberOfMatches2(bet, winner));
 
 	}
 
-	public static int getNumberOfMatches(int[] arrayA, int[] arrayB) {
+	// Corrected version based on what the exercise actually asks for.
+	public static int getNumberOfMatches2(int[] arrayA, int[] arrayB) {
 
 		int numberOfMatches = 0;
 
-		for (int i = 0; i < arrayA.length; i++) {
+		for (int number : arrayA) {
 
-			if (arrayA[i] == arrayB[i]) {
+			if (Arrays.binarySearch(arrayB, number) >= 0) {
 				numberOfMatches++;
 			}
+
 		}
 
 		return numberOfMatches;
@@ -89,6 +89,8 @@ public class Exercise6 {
 			}
 
 		}
+
+		Arrays.sort(filledWithPairs);
 
 		// Returns the resulting array.
 		return filledWithPairs;
