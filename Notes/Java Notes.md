@@ -1,3 +1,10 @@
+# Java notes.   
+Here i collect what i consider important or more complex concepts of programming to help me understand concepts as i explain them in written form.
+
+- [Recursive functions](#recursive-functions).
+- [Binary search](#binary-search-arrays).
+--- 
+
 ## Recursive Functions
 A recursive function is a function that calls itself until a condition is met. It can be imagined as a function that goes up a staircase and, when the goal is reached, heads back down to handle us the result. To work properly, a recursive function must have the following characteristics:
     
@@ -51,4 +58,38 @@ An important observation in this example is that  the variable `double res;` onl
 
 	}
 ```
+## Binary search (Arrays).   
+Binary search is an efficient tool to search for values within a **sorted array**. To use the binary search algorithm with an array, we call `Arrays.binarySearch(array, value)`. In this line, `array` is the array in which we wish to perform the search, and `value` is the value we wish to check if present or not.
 
+**Returns:**
+- If the value is present: Returns the index of the value within the array.
+- If the value is not present: Returns a negative number. 
+	-	This negative number is calculated as `-(insertion point) - 1 ` , where the insertion point is the index where the value would be inserted to maintain the sorted order.
+
+> [!NOTE]   
+> _TL;DR:_ If the function returns 0 or a greater positive number, it means the value exists within the array. On the contrary, if the function returns a negative number, it means the value is absent.
+
+**Example:**
+```
+public static void main(String[] args) {
+	
+	int[] array = {1,2,3,4,5,6,7};
+	
+	// Will return 0
+	System.out.println( Arrays.binarySearch(array, 1) );
+	
+	// Will return 4
+	System.out.println( Arrays.binarySearch(array, 5) );
+	
+	// Will return negative.
+	System.out.println( Arrays.binarySearch(array, 1000) );
+	
+}
+```
+  
+> [!IMPORTANT]   
+> - A binary search will not work unless the array is sorted. This is vital for the algorithm to work correctly. 
+> - It is also important to know that the algorithm will stop the search once it finds an instance of the searched value. If your searched value is repeated within the array, the algorithm will return the index of one of the instances, but not necessarily the first occurrence.
+
+   
+---
