@@ -1,6 +1,7 @@
 package unit5.solvedExercises.exercise9;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /*
  * Design an application to manage a programming championship, 
@@ -14,58 +15,55 @@ import java.util.Arrays;
  * should finally display the sorted scores of all participants.
  */
 public class Exercise9 {
-	
-	
-	
-	private static int[] insertPlayerScore(int[] scoreboard, int playerScore) {
-		
-
-		// Stores the index for where the player score should be inserted.
-		int insertIndex = Arrays.binarySearch(scoreboard, playerScore);
-		
-		
-		return scoreboard;
-	}
 
 	public static void main(String[] args) {
-		
-//		// creamos el array 1
-//		int[] scoreboard = new int[1];
-//		System.out.println(scoreboard[0]);
-//		
-//		// valor a introducir en array.
-//		int newScore = 100;
-//		
-//		// buscamos donde introducirlo
-//		int newScoreIndex = Arrays.binarySearch(scoreboard, newScore);
-//		
-//		if ( newScoreIndex < 0 ) { newScoreIndex=-newScoreIndex-1;  }
-//		
-//		System.out.println(newScoreIndex);
-//
-//		int[] scoreboardCopy = new int[scoreboard.length+1];
-//		
-//		System.arraycopy(scoreboard, 0, scoreboardCopy, 0, newScoreIndex);
-//		
-//		for (int element: scoreboardCopy) {
-//		System.out.println(element);
-//		}
-		
-		
-		int[] arrayA = {1,2,3};
-		int[] arrayB = {4,5,6,7};
-		
-		int[] arrayAB =  new int[7];
 
-		System.arraycopy(arrayA, 0, arrayAB, 0, arrayA.length);
-		System.arraycopy(arrayB, 0, arrayAB, 3, arrayB.length);
-		// Origin Array - Starting index in origin array - Destiny array - starting index in origin array - elements to copy
-		
-		for (int elemen: arrayAB) {
-			System.out.println(elemen);
+		Scanner sc = new Scanner(System.in);
+
+		int score[] = new int[5];
+
+		for (int i = 0; i < 5; i++) {
+
+			System.out.printf("Enter the %d player's score:\n", (i + 1));
+			score[i] = sc.nextInt();
+
 		}
 
-		
+		Arrays.sort(score);
+		System.out.printf("Scoreboard: " + Arrays.toString(score));
+
+		System.out.println("\nExhibition programmer's score: \n Enter -1 to exit this insertion.");
+		int scoreExhProgr = sc.nextInt();
+
+		while (scoreExhProgr != -1) {
+
+			int positionInArray = Arrays.binarySearch(score, scoreExhProgr);
+			int indexOfInsertion;
+
+			if (positionInArray < 0) {
+				indexOfInsertion = -positionInArray - 1;
+			}
+
+			else {
+				indexOfInsertion = positionInArray;
+			}
+
+			int[] scoreCopy = new int[score.length + 1];
+
+			System.arraycopy(score, 0, scoreCopy, 0, indexOfInsertion);
+
+			System.arraycopy(score, indexOfInsertion, scoreCopy, indexOfInsertion + 1, score.length - indexOfInsertion);
+
+			scoreCopy[indexOfInsertion] = scoreExhProgr;
+			score = scoreCopy;
+
+			System.out.println("Exhibition programmer's score: \n Enter -1 to exit this insertion.");
+			scoreExhProgr = sc.nextInt();
+
+		}
+
+		System.out.println("The final scoreboard is: " + Arrays.toString(score));
+		sc.close();
 
 	}
 
