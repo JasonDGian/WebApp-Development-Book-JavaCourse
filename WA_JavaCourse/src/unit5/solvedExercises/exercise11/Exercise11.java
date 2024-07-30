@@ -19,7 +19,8 @@ import java.util.Scanner;
 
 public class Exercise11 {
 
-	public static void generateCombination(int[] combination) {
+	// Function to generate a combination.
+	private static void generateCombination(int[] combination) {
 
 		Random generator = new Random();
 
@@ -28,7 +29,8 @@ public class Exercise11 {
 		}
 	}
 
-	public static void storePlayerGuess(int[] playerGuess, Scanner sc) {
+	// function to store the player input in the parameter array.
+	private static void storePlayerGuess(int[] playerGuess, Scanner sc) {
 
 		for (int i = 0; i < playerGuess.length; i++) {
 			System.out.println("Enter your choice for digit number " + (i + 1));
@@ -37,7 +39,8 @@ public class Exercise11 {
 
 	}
 
-	public static void printDigitsCheck(int[] secretCombination, int[] playerGuess) {
+	// Function that checks the digits.
+	private static void printDigitsCheck(int[] secretCombination, int[] playerGuess) {
 
 		int[] result = new int[secretCombination.length];
 
@@ -45,12 +48,16 @@ public class Exercise11 {
 
 			result[index] = secretCombination[index] - playerGuess[index];
 
+			// If the digit of the current index is higher.
 			if (secretCombination[index] > playerGuess[index]) {
 				System.out.println("Digit " + (index + 1) + " is too low.");
-			} else if (secretCombination[index] == playerGuess[index]) {
+			}
+			// If the digit of the current index is right..
+			else if (secretCombination[index] == playerGuess[index]) {
 				System.out.println("Digit " + (index + 1) + " is RIGHT!");
 			}
 
+			// If the digit of the current index is not higher nor equal.
 			else {
 				System.out.println("Digit " + (index + 1) + " is too high.");
 			}
@@ -59,6 +66,7 @@ public class Exercise11 {
 
 	}
 
+	// Function that checks the win status.
 	private static boolean checkWinStatus(int[] secretCombination, int[] playerGuess) {
 
 		boolean isWin = true;
@@ -75,6 +83,8 @@ public class Exercise11 {
 	public static void main(String[] args) {
 		// Scanner instance.
 		Scanner sc = new Scanner(System.in);
+		int trial = 0;
+		boolean isWin = false;
 
 		// Prompt the user to ask for difficulty settings.
 		System.out.println("What difficulty do you wish to play?\n Enter a number from 1 to 5: ");
@@ -86,13 +96,14 @@ public class Exercise11 {
 
 		// Generate secret combination.
 		generateCombination(secretCombination);
-		System.out.println("Secret number generated succesfully.");
 
 		System.out.println("Enter your guess for the " + difficulty + " digits.");
 		int[] playerGuess = new int[difficulty];
-		boolean isWin = false;
 
 		while (!isWin) {
+
+			trial++;
+			System.out.println("| - - - - - - - - - - Try number" + trial + " - - - - - - - - - - |");
 			storePlayerGuess(playerGuess, sc);
 
 			System.out.println("Your combination: " + Arrays.toString(playerGuess));
@@ -104,6 +115,7 @@ public class Exercise11 {
 
 		}
 
-		System.out.println(" YOU WIN! ");
+		System.out.println("| - - - - - - - - - - Try number" + trial + " - - - - - - - - - - |");
+		System.out.println(" CONGRATULATIONS, YOU WIN! ");
 	}
 }
