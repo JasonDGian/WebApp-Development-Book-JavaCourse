@@ -93,3 +93,36 @@ public static void main(String[] args) {
 
    
 ---
+
+## Copying Arrays.
+To copy arrays we can use two methos. One belongs to the Arrays api and the other to System. 
+
+### System.arraycopy( org, orgPos, dest, destPos, elements ):
+With this method we can copy and array into another array deciding certain aspects of the process. We have to specify, in this order:
+   
+1. The origin array.
+2. The origin starting index.
+3. The destination array.
+4. The destintation starting point.
+5. The number of elements to copy.
+
+
+**Example.**
+This example copies the content of both `arrayA` and `arrayB` into `arrayAB`
+```
+int[] arrayA = {1,2,3};
+int[] arrayB = {4,5,6,7};
+
+int[] arrayAB =  new int[7];
+
+System.arraycopy(arrayA, 0, arrayAB, 0, 3);
+System.arraycopy(arrayB, 0, arrayAB, 3, arrayB.length);
+
+// Origin - Starting index - Destiny - Starting index - elements to copy
+
+for (int elemen: arrayAB) {
+	System.out.println(elemen);
+}
+```
+>[!IMPORTANT]
+>Working with this method we must pay attention to the arrays length to avoid IndexOutOfBounds errors.
