@@ -8,14 +8,12 @@ public class Exercise1 {
 	 */
 
 	public static void main(String[] args) {
-
-		
 		
 		for ( int codepoint = 0x000; codepoint < 0xFFFF ; codepoint++) {
 			
 			String character = Integer.toHexString(codepoint);
 			
-			System.out.println( "\\u" + character  + " - "+ (char)codepoint  );
+			System.out.println( "\\u" + character  + " - "+ (char)codepoint + "  Is a digit; " + Character.isDigit((char)codepoint) );
 			
 		}
 		
