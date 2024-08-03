@@ -1,5 +1,7 @@
 package unit6.solvedExercises.exercise11;
 
+import java.util.Scanner;
+
 /*
  * There is the following relationship of letters:
  * Set 1: e i k m p q r s t u v
@@ -26,7 +28,11 @@ public class Exercise11 {
 		// Test:
 		// Hello world, I am encoded! -> Hpllo Woeld, v au pncodpd!
 
-		String texto = "Hello world, I am encoded!";
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter a sentence to encode:");
+
+		String texto = sc.nextLine();
 
 		System.out.println(texto);
 
@@ -38,10 +44,10 @@ public class Exercise11 {
 	static String encodeString(String textToEncode) {
 
 		String encodedText = "";
-		
+
 		for (int i = 0; i < textToEncode.length(); i++) {
 
-			encodedText = encodedText + String.valueOf( encodeCharAux(textToEncode.charAt(i) ) );
+			encodedText = encodedText + String.valueOf(encodeCharAux(textToEncode.charAt(i)));
 
 		}
 
@@ -63,10 +69,12 @@ public class Exercise11 {
 
 		int charIndex = String.valueOf(charsToEncode).indexOf(character);
 
-		encodedCharacter = String.valueOf(encodingChar).charAt(charIndex);
+		if (charIndex > -1) {
+			encodedCharacter = String.valueOf(encodingChar).charAt(charIndex);
+		}
 
 		return encodedCharacter;
-		
+
 	}
 
 }
