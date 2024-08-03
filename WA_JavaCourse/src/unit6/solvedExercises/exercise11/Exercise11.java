@@ -39,6 +39,8 @@ public class Exercise11 {
 		texto = encodeString(texto);
 
 		System.out.println(texto);
+		
+		sc.close();
 	}
 
 	static String encodeString(String textToEncode) {
