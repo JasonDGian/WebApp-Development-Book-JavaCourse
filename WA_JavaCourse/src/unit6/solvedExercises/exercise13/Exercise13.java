@@ -1,5 +1,11 @@
 package unit6.solvedExercises.exercise13;
 
+/*
+ * Design an algorithm that reads a phrase from the keyboard and indicates, 
+ * for each letter that appears in the phrase, how many times it repeats. 
+ * Uppercase and lowercase letters are considered the same for the count.
+ */
+
 import java.util.Scanner;
 
 public class Exercise13 {

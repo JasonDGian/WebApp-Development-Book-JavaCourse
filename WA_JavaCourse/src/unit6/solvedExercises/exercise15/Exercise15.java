@@ -3,7 +3,13 @@ package unit6.solvedExercises.exercise15;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercise14 {
+/*
+ *  Modify the previous activity so that the program indicates to
+ *  player 2 how many letters match (are the same and in the same 
+ *  position) between the text they entered and the correct answer.
+ */
+
+public class Exercise15 {
 
 	public static void main(String[] args) {
 
