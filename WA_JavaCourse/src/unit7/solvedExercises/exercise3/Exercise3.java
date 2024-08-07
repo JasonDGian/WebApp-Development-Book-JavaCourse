@@ -1,13 +1,12 @@
 package unit7.solvedExercises.exercise3;
 
 /*
- * In the CheckingAccount class, overload the constructors to be able to create objects:
+ * Modify the visibility of the CheckingAccount class so that it is visible from external classes, and the visibility of its attributes so that:
  * 
- * With the account holder's DNI and an initial balance.
- * With the DNI, name, and initial balance.
- * Write a program that verifies the functionality of the methods.
+ * balance: is not visible to other classes.
+ * name: is public for any class.
+ * ID: is only visible to neighboring classes.
  */
-
 public class Exercise3 {
 
 	public static void main(String[] args) {
