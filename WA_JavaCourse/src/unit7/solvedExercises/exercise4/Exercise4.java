@@ -39,7 +39,7 @@ public class Exercise4 {
 		System.out.println(	CheckingAccount.getBankName() );
 
 		// Accessing it through the instance (should not be done afaik).
-		System.out.println(	accountJames.getBankName() );
+		//System.out.println(	accountJames.getBankName() );
 
 		/* 
 		 * NOTE: The instance access to static methog while syntactically allowed in 
