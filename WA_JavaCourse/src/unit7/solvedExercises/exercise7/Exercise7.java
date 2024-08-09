@@ -18,52 +18,29 @@ public class Exercise7 {
 	
 	public static void main(String[] args) {
 		
-		Text notes = new Text( 30 );
+		Text notes = new Text( 11 );
 		
-		System.out.println( notes.getCreationDate() );
-				
-		// Returns empty status message.
-		System.out.println( notes.getTextBody() );
-		
-		notes.setTextBody("world");
-		
-		System.out.println("----------");
 		notes.printTextDetails();
-		System.out.println("----------");
-		
-		System.out.println( notes.getTextBody() );
-		
-		notes.prefixChar('-');
-		
-		System.out.println( notes.getTextBody() );
+
+		notes.setTextBody("world");
 		
 		notes.appendChar('!');
 		
-		System.out.println( notes.getTextBody() );
-	
+		notes.prefixChar(' ');
+		
 		notes.prefixText("Hello");
-		
-		System.out.println("----------");
-		notes.printTextDetails();
-		System.out.println("----------");
-	
+
 		System.out.println( notes.getTextBody() );
 		
-		notes.appendText("\nThis is my notes object!");
-		
-		System.out.println( notes.getTextBody() );
-		
-		// Must return error of exceeding characters.
-		notes.appendText(" The king of the iron fist tournament is... ");
-		notes.prefixChar('E');
-
-		
-		// Texting other methods.
-		System.out.println("----------");
 		notes.printTextDetails();
-		System.out.println("----------");
 		
-
+		// NOTICE: When simply running the program the modification date is not perceiveably changed, 
+		// must test with debugging tools to confirm the correct functioning of the method.
+		
+		// Test for errors.
+		notes.appendChar('1');
+		
+		
 		
 	}
 

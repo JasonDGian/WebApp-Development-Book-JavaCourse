@@ -34,7 +34,7 @@ public class Text {
 
 		this.maxLength = maxLength;
 		this.creationTime = LocalDateTime.now();
-		this.lastModificationTime = creationTime;
+		this.lastModificationTime = LocalDateTime.now();
 	}
 
 	// Access Methods.
@@ -69,21 +69,21 @@ public class Text {
 	}
 
 	public int getMaxLength() {
-		return maxLength;
+		return this.maxLength;
 	}
 
 	// Returns a string with the date of creation.
 	public String getCreationDate() {
-		return creationTime.format(dateTimeFormatter);
+		return this.creationTime.format(dateTimeFormatter);
 	}
 
 	// Returns a string with the date of las modification.
 	public String getLastModificationTime() {
-		return lastModificationTime.format(dateTimeFormatter);
+		return this.lastModificationTime.format(dateTimeFormatter);
 	}
 
 	// Updates the modification date.
-	public void updateLastModificationTime() {
+	private void updateLastModificationTime() {
 		this.lastModificationTime = LocalDateTime.now();
 	}
 
@@ -91,10 +91,12 @@ public class Text {
 	// object.
 	public void printTextDetails() {
 
+		System.out.println("----------------- [ NOTES DETAILS ] -------------------");
 		System.out.println("The text maximum length is: " + this.maxLength);
 		System.out.println("The text creation date is: " + this.getCreationDate());
 		System.out.println("The text last modification date  is: " + this.getLastModificationTime());
 		System.out.println("The total amount of vowels found is: " + this.getVowelsCount());
+		System.out.println("---------------------------------------------------------");
 
 	}
 
