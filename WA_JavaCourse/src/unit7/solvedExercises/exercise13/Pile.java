@@ -9,7 +9,7 @@ public class Pile {
 	}
 
 	public void unstack() {
-		this.list.deleteElement(1);
+		this.list.deleteElement( this.list.length()-1 );
 	}
 
 	public void print() {
