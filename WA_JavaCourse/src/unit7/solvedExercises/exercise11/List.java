@@ -15,29 +15,32 @@ public class List {
 		return numbers.length;
 	}
 
-	public void appendInteger(Integer number) {
+	public void append(Integer number) {
 
-		// copy original array with 1 extra slot
-		Integer[] numbersCopy = Arrays.copyOf(numbers, (numbers.length + 1));
+		this.numbers = Arrays.copyOf(this.numbers, (this.numbers.length + 1));
+		this.numbers[this.numbers.length - 1] = number;
+	}
 
-		numbersCopy[numbersCopy.length - 1] = number;
+	public void append(List nums) {
 
-		this.numbers = numbersCopy;
+		// creates a new copy with the length of the new list included.
+		int initialSize = this.numbers.length;
+		this.numbers = Arrays.copyOf(this.numbers, (this.numbers.length + nums.length()));
+
+		System.arraycopy(nums.numbers, 0, this.numbers, initialSize, nums.numbers.length);
+
 	}
 
 	public void prefixInteger(Integer number) {
 
-		Integer[] newArray = Arrays.copyOf(numbers, this.numbers.length + 1);
+		this.numbers = Arrays.copyOf(this.numbers, this.numbers.length + 1);
 
-		// Move all elements one position to the right.
-		for (int i = newArray.length - 1; i > 0; i--) {
+		// Copies the numbers array within itself, starting to copy from index
+		// 0 and pasting from index 1 the complete content.
+		System.arraycopy(this.numbers, 0, this.numbers, 1, this.numbers.length - 1);
 
-			newArray[i] = newArray[i - 1];
-		}
-
-		newArray[0] = number;
-
-		this.numbers = newArray;
+		// Reassigns the first element in the array to the parameter element.
+		this.numbers[0] = number;
 
 	}
 
@@ -64,14 +67,6 @@ public class List {
 		}
 
 		return index;
-
-	}
-
-	public void appendIntegerArray(List nums) {
-
-		for (Integer num : nums.numbers) {
-			appendInteger(num);
-		}
 
 	}
 
@@ -102,6 +97,31 @@ public class List {
 
 		this.numbers = newArray;
 
+	}
+	
+	public Integer deleteElement( int index) {
+		
+		Integer deleted = null;
+		
+		if ( index <= 0 && index < this.numbers.length  ) {
+			
+			deleted = this.numbers[index];
+		
+			for ( int i = index ; i+1 < this.numbers.length ; i++ ) {
+				
+				this.numbers[i] = this.numbers[i+1];
+				
+			}
+			
+			// trim the last element.
+			this.numbers = Arrays.copyOf(this.numbers, this.numbers.length-1);
+			
+			
+			
+		}
+
+		
+		return deleted;
 	}
 
 }

@@ -28,14 +28,14 @@ public class Exercise11 {
 		myList.length();
 	
 		// Insert a number at the end of the list.
-		myList.appendInteger(1);
-		myList.appendInteger(2);
-		myList.appendInteger(3);
-		myList.appendInteger(4);
+		myList.append(1);
+		myList.append(2);
+		myList.append(3);
+		myList.append(4);
 				
-		myList2.appendInteger(7);
-		myList2.appendInteger(8);
-		myList2.appendInteger(9);
+		myList2.append(7);
+		myList2.append(8);
+		myList2.append(9);
 
 	
 		// Insert a number at the beginning of the list.
@@ -44,7 +44,7 @@ public class Exercise11 {
 	
 	
 		// Add to the end of the list the elements of another list passed as a parameter.
-		myList.appendIntegerArray( myList2 );
+		myList.append( myList2 );
 		
 		
 		// Retrieve the element at a specified index passed as a parameter.
@@ -59,6 +59,14 @@ public class Exercise11 {
 		// Insert a number at a specific position in the list, where the index is passed as a parameter.
 		myList.insertAtIndex(100,0);
 		myList.insertAtIndex(300,2);
+		
+		myList.print();
+		
+		myList.deleteElement(0);
+		
+		myList.print();
+		
+		myList.deleteElement(1);
 		
 		myList.print();
 		
