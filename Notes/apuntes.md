@@ -58,10 +58,29 @@ do {
 } while (i <= 5);
 ```
 
+# 📌 Usa el tipo de bucle adecuado 🔄
+Cada bucle tiene su propósito:
+- `for`: Ideal cuando conoces el número exacto de iteraciones.
+- `while`: Mejor cuando la condición depende de factores externos.
+- `do while`: Útil cuando necesitas ejecutar el bloque al menos una vez.
 
+# 📌 Usa `break` y `continue`.
+- `break`: Termina el bucle completamente.
+- `continue`: Salta la iteración actual y pasa a la siguiente.
 
+```java
+int[] numeros = {3, 7, 9, 12, 15};
+int objetivo = 9;
 
+for (int num : numeros) {
+    if (num == objetivo) {
+        System.out.println("Número encontrado: " + num);
+        break; // Termina el bucle al encontrar el número
+    }
+}
+```
 
-
+>[!CAUTION]
+>La instrucción `break` no está bien vista por muchos programadores. En su lugar se puede hacer uso de 'variable de control' o 'flags / banderas' que permiten mantener un control sobre la iteración de manera mas controlada.
 
 
